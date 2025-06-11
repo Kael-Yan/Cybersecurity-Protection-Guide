@@ -1,0 +1,55 @@
+<!-- 插入到预防措施部分之后 -->
+<section class="security-quiz">
+    <h2 data-lang data-zh-CN="网络安全测验" data-zh-TW="網路安全測驗" data-en="Cybersecurity Quiz">网络安全测验</h2>
+    <div id="quiz-container"></div>
+    <button onclick="startQuiz()" data-lang data-zh-CN="开始测验" data-zh-TW="開始測驗" data-en="Start Quiz">开始测验</button>
+    <div id="quiz-result" style="display:none;">
+        <h3 data-lang data-zh-CN="您的得分：" data-zh-TW="您的得分：" data-en="Your Score:">您的得分：</h3>
+        <p id="score-display"></p>
+    </div>
+</style>
+
+<script>
+// 添加到script.js
+let currentQuiz = [];
+let userScore = 0;
+
+async function startQuiz() {
+    const response = await fetch('assets/quiz-questions.json');
+    currentQuiz = (await response.json())
+        .map(q => ({
+            ...q,
+            question: q.question[currentLang] || q.question.en,
+            options: q.options.map(opt => ({
+                text: opt[currentLang] || opt.en,
+                correct: opt.correct
+            }))
+        }))
+        .slice(0, 5); // 随机选取5题
+    
+    renderQuizQuestion(0);
+}
+
+function renderQuizQuestion(index) {
+    if(index >= currentQuiz.length) {
+        showQuizResult();
+        return;
+    }
+    
+    const question = currentQuiz[index];
+    const optionsHTML = question.options.map((opt, i) => `
+        <label>
+            <input type="radio" name="quiz-answer" value="${i}">
+            ${opt.text}
+        </label><br>
+    `).join('');
+    
+    document.getElementById('quiz-container').innerHTML = `
+        <div class="quiz-question">
+            <h3>${question.question}</h3>
+            ${optionsHTML}
+            <button onclick="submitAnswer(${index})">提交</button>
+        </div>
+    `;
+}
+</script>
