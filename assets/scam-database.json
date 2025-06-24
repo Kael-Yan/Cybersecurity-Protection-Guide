@@ -1,0 +1,32 @@
+[
+    {
+        "title": {
+            "zh-CN": "假冒银行钓鱼邮件",
+            "zh-TW": "假冒銀行釣魚郵件",
+            "en": "Fake Bank Phishing Email"
+        },
+        "description": {
+            "zh-CN": "冒充汇丰银行发送账户异常通知，诱导点击恶意链接",
+            "zh-TW": "冒充匯豐銀行發送賬戶異常通知，誘導點擊惡意鏈接",
+            "en": "Posing as HSBC to send fake account alerts with malicious links"
+        },
+        "date": "2023-06-15",
+        "type": "phishing",
+        "regions": ["HK", "CN"]
+    },
+    {
+        "title": {
+            "zh-CN": "虚假投资平台",
+            "zh-TW": "虛假投資平台",
+            "en": "Fake Investment Platform"
+        },
+        "description": {
+            "zh-CN": "承诺高回报诱导转账，实际为庞氏骗局",
+            "zh-TW": "承諾高回報誘導轉賬，實際為龐氏騙局",
+            "en": "Promising high returns to transfer money, actually a Ponzi scheme"
+        },
+        "date": "2023-05-22",
+        "type": "investment",
+        "regions": ["HK", "TW"]
+    }
+]

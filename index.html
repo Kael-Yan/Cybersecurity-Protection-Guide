@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網路安全防護指南</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <!-- 背景粒子效果 -->
+    <div id="particles-js"></div>
+    
+    <!-- 语言选择器 -->
+    <div class="language-switcher">
+        <button onclick="changeLanguage('zh-TW')">繁體中文</button>
+        <button onclick="changeLanguage('zh-CN')">简体中文</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </div>
+
+    <!-- 主頁 -->
+    <section id="home" class="fullpage-section hero-section">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 data-lang data-zh-TW="網路安全防護指南" data-zh-CN="网络安全防护指南" data-en="Cybersecurity Protection Guide">網路安全防護指南</h1>
+            <p data-lang data-zh-TW="識別與防範釣魚網路詐騙，保護您的個人信息和財產安全" 
+               data-zh-CN="识别与防范钓鱼网络诈骗，保护您的个人信息和财产安全"
+               data-en="Identify and prevent phishing scams to protect your personal information and financial assets">
+                識別與防範釣魚網路詐騙，保護您的個人信息和財產安全
+            </p>
+            <button class="scroll-down-btn" onclick="scrollToSection('about')">
+                <span data-lang data-zh-TW="開始了解" data-zh-CN="开始了解" data-en="Learn More">開始了解</span>
+                <svg viewBox="0 0 24 24">
+                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- 關於釣魚詐騙 -->
+    <section id="about" class="fullpage-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="什麼是釣魚網路詐騙？" data-zh-CN="什么是钓鱼网络诈骗？" data-en="What is Phishing Scam?">什麼是釣魚網路詐騙？</h2>
+            <div class="info-cards">
+                <div class="info-card animate__animated" data-animation="fadeInUp">
+                    <div class="card-icon">🖥️</div>
+                    <h3 data-lang data-zh-TW="網路犯罪形式" data-zh-CN="网络犯罪形式" data-en="Cyber Crime">網路犯罪形式</h3>
+                    <p data-lang data-zh-TW="不法分子偽裝成可信賴的個人或機構，通過電子郵件、簡訊等方式誘導受害者提供敏感信息" 
+                       data-zh-CN="不法分子伪装成可信赖的个人或机构，通过电子邮件、短信等方式诱导受害者提供敏感信息"
+                       data-en="Scammers disguise themselves as trustworthy entities to trick victims into revealing sensitive information through emails, messages, etc.">
+                        不法分子偽裝成可信賴的個人或機構，通過電子郵件、簡訊等方式誘導受害者提供敏感信息
+                    </p>
+                </div>
+                <div class="info-card animate__animated" data-animation="fadeInUp" data-delay="200">
+                    <div class="card-icon">💰</div>
+                    <h3 data-lang data-zh-TW="犯罪目的" data-zh-CN="犯罪目的" data-en="Criminal Purpose">犯罪目的</h3>
+                    <p data-lang data-zh-TW="獲取用戶名、密碼、信用卡信息等，用於身份盜竊、金融欺詐等非法活動" 
+                       data-zh-CN="获取用户名、密码、信用卡信息等，用于身份盗窃、金融欺诈等非法活动"
+                       data-en="Obtain usernames, passwords, credit card information, etc. for identity theft, financial fraud and other illegal activities">
+                        獲取用戶名、密碼、信用卡信息等，用於身份盜竊、金融欺詐等非法活動
+                    </p>
+                </div>
+                <div class="info-card animate__animated" data-animation="fadeInUp" data-delay="400">
+                    <div class="card-icon">📈</div>
+                    <h3 data-lang data-zh-TW="現狀" data-zh-CN="现状" data-en="Current Situation">現狀</h3>
+                    <p data-lang data-zh-TW="每年全球因釣魚詐騙造成的損失超過百億美元，且仍在持續增長" 
+                       data-zh-CN="每年全球因钓鱼诈骗造成的损失超过百亿美元，且仍在持续增长"
+                       data-en="Global losses from phishing scams exceed billions of dollars annually and continue to grow">
+                        每年全球因釣魚詐騙造成的損失超過百億美元，且仍在持續增長
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 詐騙類型 -->
+    <section id="types" class="fullpage-section dark-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="常見的釣魚詐騙類型" data-zh-CN="常见的钓鱼诈骗类型" data-en="Common Phishing Scam Types">常見的釣魚詐騙類型</h2>
+            <div class="timeline">
+                <div class="timeline-item animate__animated" data-animation="fadeInRight">
+                    <div class="timeline-date">1</div>
+                    <div class="timeline-content">
+                        <h3 data-lang data-zh-TW="電子郵件釣魚" data-zh-CN="电子邮件钓鱼" data-en="Email Phishing">電子郵件釣魚</h3>
+                        <p data-lang data-zh-TW="偽裝成合法機構發送的郵件，要求點擊鏈接或下載附件" 
+                           data-zh-CN="伪装成合法机构发送的邮件，要求点击链接或下载附件"
+                           data-en="Emails disguised as from legitimate organizations requesting to click links or download attachments">
+                            偽裝成合法機構發送的郵件，要求點擊鏈接或下載附件
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate__animated" data-animation="fadeInRight" data-delay="200">
+                    <div class="timeline-date">2</div>
+                    <div class="timeline-content">
+                        <h3 data-lang data-zh-TW="簡訊釣魚(Smishing)" data-zh-CN="短信钓鱼(Smishing)" data-en="SMS Phishing (Smishing)">簡訊釣魚(Smishing)</h3>
+                        <p data-lang data-zh-TW="通過簡訊發送虛假通知或優惠信息" 
+                           data-zh-CN="通过短信发送虚假通知或优惠信息"
+                           data-en="Fake notifications or promotional messages sent via SMS">
+                            通過簡訊發送虛假通知或優惠信息
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate__animated" data-animation="fadeInRight" data-delay="400">
+                    <div class="timeline-date">3</div>
+                    <div class="timeline-content">
+                        <h3 data-lang data-zh-TW="語音釣魚(Vishing)" data-zh-CN="语音钓鱼(Vishing)" data-en="Voice Phishing (Vishing)">語音釣魚(Vishing)</h3>
+                        <p data-lang data-zh-TW="通過電話冒充客服或執法人員索取信息" 
+                           data-zh-CN="通过电话冒充客服或执法人员索取信息"
+                           data-en="Phone calls impersonating customer service or law enforcement to obtain information">
+                            通過電話冒充客服或執法人員索取信息
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 識別方法 -->
+    <section id="identify" class="fullpage-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="如何識別釣魚詐騙？" data-zh-CN="如何识别钓鱼诈骗？" data-en="How to Identify Phishing Scams?">如何識別釣魚詐騙？</h2>
+            <div class="steps-container">
+                <div class="step animate__animated" data-animation="fadeInLeft">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-lang data-zh-TW="檢查發件人地址" data-zh-CN="检查发件人地址" data-en="Check Sender Address">檢查發件人地址</h3>
+                        <p data-lang data-zh-TW="查看是否與聲稱的機構官方地址一致" 
+                           data-zh-CN="查看是否与声称的机构官方地址一致"
+                           data-en="Check if it matches the official address of the claimed organization">
+                            查看是否與聲稱的機構官方地址一致
+                        </p>
+                    </div>
+                </div>
+                <div class="step animate__animated" data-animation="fadeInLeft" data-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-lang data-zh-TW="警惕緊急語言" data-zh-CN="警惕紧急语言" data-en="Beware Urgent Language">警惕緊急語言</h3>
+                        <p data-lang data-zh-TW="如「立即行動否則賬戶關閉」等威脅性語言" 
+                           data-zh-CN="如「立即行动否则账户关闭」等威胁性语言"
+                           data-en="Threatening language like 'Act now or your account will be closed'">
+                            如「立即行動否則賬戶關閉」等威脅性語言
+                        </p>
+                    </div>
+                </div>
+                <div class="step animate__animated" data-animation="fadeInLeft" data-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-lang data-zh-TW="注意拼寫錯誤" data-zh-CN="注意拼写错误" data-en="Look for Spelling Mistakes">注意拼寫錯誤</h3>
+                        <p data-lang data-zh-TW="正規機構通常不會出現拼寫和語法錯誤" 
+                           data-zh-CN="正规机构通常不会出现拼写和语法错误"
+                           data-en="Legitimate organizations usually avoid spelling and grammar mistakes">
+                            正規機構通常不會出現拼寫和語法錯誤
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 防範措施 -->
+    <section id="prevent" class="fullpage-section dark-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="防範釣魚詐騙的措施" data-zh-CN="防范钓鱼诈骗的措施" data-en="Phishing Prevention Measures">防範釣魚詐騙的措施</h2>
+            <div class="prevention-cards">
+                <div class="prevention-card animate__animated" data-animation="fadeInUp">
+                    <h3 data-lang data-zh-TW="個人防護" data-zh-CN="个人防护" data-en="Personal Protection">個人防護</h3>
+                    <ul>
+                        <li data-lang data-zh-TW="為不同賬戶使用獨特且複雜的密碼" 
+                            data-zh-CN="为不同账户使用独特且复杂的密码"
+                            data-en="Use unique and complex passwords for different accounts">
+                            為不同賬戶使用獨特且複雜的密碼
+                        </li>
+                        <li data-lang data-zh-TW="啟用雙重身份驗證(2FA)" 
+                            data-zh-CN="启用双重身份验证(2FA)"
+                            data-en="Enable two-factor authentication (2FA)">
+                            啟用雙重身份驗證(2FA)
+                        </li>
+                        <li data-lang data-zh-TW="定期更新軟件和操作系統" 
+                            data-zh-CN="定期更新软件和操作系统"
+                            data-en="Regularly update software and operating systems">
+                            定期更新軟件和操作系統
+                        </li>
+                    </ul>
+                </div>
+                <div class="prevention-card animate__animated" data-animation="fadeInUp" data-delay="200">
+                    <h3 data-lang data-zh-TW="企業防護" data-zh-CN="企业防护" data-en="Enterprise Protection">企業防護</h3>
+                    <ul>
+                        <li data-lang data-zh-TW="對員工進行網路安全培訓" 
+                            data-zh-CN="对员工进行网络安全培训"
+                            data-en="Provide cybersecurity training for employees">
+                            對員工進行網路安全培訓
+                        </li>
+                        <li data-lang data-zh-TW="實施電子郵件過濾系統" 
+                            data-zh-CN="实施电子邮件过滤系统"
+                            data-en="Implement email filtering systems">
+                            實施電子郵件過濾系統
+                        </li>
+                        <li data-lang data-zh-TW="建立安全事件響應計劃" 
+                            data-zh-CN="建立安全事件响应计划"
+                            data-en="Establish security incident response plans">
+                            建立安全事件響應計劃
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 視頻教育 -->
+    <section id="videos" class="fullpage-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="防詐騙視頻教育" data-zh-CN="防诈骗视频教育" data-en="Anti-Scam Videos">防詐騙視頻教育</h2>
+            <div class="video-grid">
+                <div class="video-card animate__animated" data-animation="fadeInUp">
+                    <h3 data-lang data-zh-TW="網路詐騙揭秘" data-zh-CN="网络诈骗揭秘" data-en="Cyber Scam Exposed">網路詐騙揭秘</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Zm9wdwka8X0" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <p data-lang data-zh-TW="了解常見網路詐騙手法和識別特徵" 
+                       data-zh-CN="了解常见网络诈骗手法和识别特征"
+                       data-en="Learn about common cyber scam techniques and identification features">
+                        了解常見網路詐騙手法和識別特徵
+                    </p>
+                </div>
+                <div class="video-card animate__animated" data-animation="fadeInUp" data-delay="200">
+                    <h3 data-lang data-zh-TW="防範網路詐騙指南" data-zh-CN="防范网络诈骗指南" data-en="Preventing Cyber Scams">防範網路詐騙指南</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xl_iMPgQhGs" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <p data-lang data-zh-TW="學習實用技巧保護自己免受網路詐騙" 
+                       data-zh-CN="学习实用技巧保护自己免受网络诈骗"
+                       data-en="Learn practical tips to protect yourself from cyber scams">
+                        學習實用技巧保護自己免受網路詐騙
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例庫 -->
+    <section id="cases" class="fullpage-section dark-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="真實案例庫" data-zh-CN="真实案例库" data-en="Case Library">真實案例庫</h2>
+            <div class="case-filters">
+                <select id="case-type-filter">
+                    <option value="all" data-lang data-zh-TW="全部類型" data-zh-CN="全部类型" data-en="All Types">全部類型</option>
+                    <option value="phishing" data-lang data-zh-TW="釣魚詐騙" data-zh-CN="钓鱼诈骗" data-en="Phishing">釣魚詐騙</option>
+                    <option value="investment" data-lang data-zh-TW="投資詐騙" data-zh-CN="投资诈骗" data-en="Investment">投資詐騙</option>
+                </select>
+                <select id="case-region-filter">
+                    <option value="all" data-lang data-zh-TW="全部地區" data-zh-CN="全部地区" data-en="All Regions">全部地區</option>
+                    <option value="HK" data-lang data-zh-TW="香港" data-zh-CN="香港" data-en="Hong Kong">香港</option>
+                    <option value="TW" data-lang data-zh-TW="台灣" data-zh-CN="台湾" data-en="Taiwan">台灣</option>
+                </select>
+            </div>
+            <div id="cases-grid" class="cases-grid"></div>
+        </div>
+    </section>
+
+    <!-- 測驗遊戲 -->
+    <section id="quiz" class="fullpage-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="詐騙識別測驗" data-zh-CN="诈骗识别测验" data-en="Scam Identification Quiz">詐騙識別測驗</h2>
+            <div class="quiz-container">
+                <div class="quiz-intro">
+                    <p data-lang data-zh-TW="測試您識別釣魚詐騙的能力，完成測驗可獲得安全等級評估" 
+                       data-zh-CN="测试您识别钓鱼诈骗的能力，完成测验可获得安全等级评估"
+                       data-en="Test your ability to identify phishing scams and get a security rating after completing the quiz">
+                        測試您識別釣魚詐騙的能力，完成測驗可獲得安全等級評估
+                    </p>
+                    <button onclick="startQuiz()" data-lang data-zh-TW="開始測驗" data-zh-CN="开始测验" data-en="Start Quiz">開始測驗</button>
+                </div>
+                <div id="quiz-questions" style="display:none;"></div>
+                <div id="quiz-result" style="display:none;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact" class="fullpage-section dark-section">
+        <div class="section-content">
+            <h2 data-lang data-zh-TW="舉報與幫助" data-zh-CN="举报与帮助" data-en="Report & Help">舉報與幫助</h2>
+            <div class="contact-cards">
+                <div class="contact-card animate__animated" data-animation="fadeInUp">
+                    <h3 data-lang data-zh-TW="緊急聯絡" data-zh-CN="紧急联络" data-en="Emergency Contact">緊急聯絡</h3>
+                    <p data-lang data-zh-TW="反詐騙專線: " data-zh-CN="反诈骗专线: " data-en="Anti-Fraud Hotline: ">反詐騙專線: </p>
+                    <p><span id="antifraud-hotline">165</span></p>
+                    <p data-lang data-zh-TW="報警電話: " data-zh-CN="报警电话: " data-en="Police: ">報警電話: </p>
+                    <p><span id="police-number">110</span></p>
+                </div>
+                <div class="contact-card animate__animated" data-animation="fadeInUp" data-delay="200">
+                    <h3 data-lang data-zh-TW="線上舉報" data-zh-CN="线上举报" data-en="Online Report">線上舉報</h3>
+                    <button onclick="report('sms')" data-lang data-zh-TW="舉報詐騙簡訊" data-zh-CN="举报诈骗短信" data-en="Report Scam SMS">舉報詐騙簡訊</button>
+                    <button onclick="report('email')" data-lang data-zh-TW="舉報釣魚郵件" data-zh-CN="举报钓鱼邮件" data-en="Report Phishing Email">舉報釣魚郵件</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdcvHUCBd2xiFhC7nRZvEwBpQkY6GeoBwjP9lHwIRLUpYNadg/viewform" 
+   target="_blank" 
+   class="floating-btn">
+   📝 参与问卷调查
+    </a>
+
+    <!-- 新增数据展示区块 -->
+<section id="impact" class="fullpage-section dark-section">
+  <div class="section-content">
+    <h2 data-lang data-zh-TW="項目影響力數據" data-zh-CN="项目影响力数据" data-en="Project Impact Metrics">
+      项目影响力数据
+    </h2>
+    
+    <!-- 指标卡片容器 -->
+    <div class="metric-cards">
+      <div class="metric-card" id="awareness-metric">
+        <h3 data-lang data-zh-TW="防护意识提升率" data-zh-CN="防护意识提升率" data-en="Awareness Improvement">防护意识提升率</h3>
+        <div class="metric-value">65.6%</div>
+        <div class="metric-comparison">
+          <span class="up-arrow">↑</span>
+          <span data-lang data-zh-TW="比行业平均高20.6%" data-zh-CN="比行业平均高20.6%" data-en="20.6% above industry">比行业平均高20.6%</span>
+        </div>
+      </div>
+      
+      <!-- 其他指标卡片... -->
+    </div>
+
+    <!-- 可视化图表容器 -->
+    <div class="viz-container">
+      <div class="viz-card">
+        <h4 data-lang data-zh-TW="高风险群体分布" data-zh-CN="高风险群体分布" data-en="High-Risk Groups">高风险群体分布</h4>
+        <div id="sunburst-chart"></div>
+      </div>
+      
+      <div class="viz-card">
+        <h4 data-lang data-zh-TW="年龄-收入风险矩阵" data-zh-CN="年龄-收入风险矩阵" data-en="Age-Income Risk Matrix">年龄-收入风险矩阵</h4>
+        <div id="heatmap-chart"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer>
+        <p>© <span id="current-year">2023</span> 
+            <span data-lang data-zh-TW="網路安全防護宣傳" data-zh-CN="网络安全防护宣传" data-en="Cybersecurity Awareness">網路安全防護宣傳</span> | 
+            <span data-lang data-zh-TW="本網站僅用於教育目的" data-zh-CN="本网站仅用于教育目的" data-en="This website is for educational purposes only">本網站僅用於教育目的</span>
+        </p>
+        <p data-lang data-zh-TW="提醒：真正的機構永遠不會通過電話或郵件索要您的密碼或驗證碼" 
+           data-zh-CN="提醒：真正的机构永远不会通过电话或邮件索要您的密码或验证码"
+           data-en="Reminder: Legitimate organizations will never ask for your password or verification code via phone or email">
+            提醒：真正的機構永遠不會通過電話或郵件索要您的密碼或驗證碼
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script src="case-library.js"></script>
+</body>
+</html>
